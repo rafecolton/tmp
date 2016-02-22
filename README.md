@@ -16,3 +16,12 @@ Twitter Bootstrap
 
 0. Create or edit [Markdown](https://daringfireball.net/projects/markdown/) files in `static/`
 0. View notes by visiting [http://localhost:9000](http://localhost:9000)
+
+## Other
+
+To tell git to ignore changes to `static/includes/menu-custom.html` when
+adding custom pages to the nav, use the following command:
+
+```bash
+git update-index --assume-unchanged static/includes/menu-custom.html
+```
