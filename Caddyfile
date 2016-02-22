@@ -1,0 +1,10 @@
+localhost:9000
+log access.log
+errors error.log
+ext .md
+root ./static/
+markdown / {
+  ext .md
+  template ../templates/default.html
+  dev
+}
