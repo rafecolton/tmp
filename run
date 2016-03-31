@@ -1,0 +1,19 @@
+#!/bin/bash
+
+readonly PORT="${PORT:-9000}"
+
+set -o errexit
+set -o pipefail
+set -o nounset
+
+main() {
+  export PORT
+
+  caddy &
+  local code=$?
+  trap "kill -SIGINT $code" EXIT SIGINT SIGTERM
+  open --background http://localhost:9000
+  wait
+}
+
+main "$@"

@@ -1,4 +1,4 @@
-localhost:9000
+localhost:{$PORT}
 log access.log
 errors error.log
 ext .md
